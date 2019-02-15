@@ -3,7 +3,7 @@ import React from 'react';
 function Character(props) {
     return (
         <div className="character-box">
-        This is a character test. 
+        <h3>{props.starwarsChars}</h3>
         </div>
     )
 }
