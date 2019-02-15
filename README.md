@@ -26,11 +26,19 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+ReactJS is a Javascript library (that some people argue is a framework) that tries to solve the problem of having multiple elements refreshing and different interactions happening at different rates all at the same time on the DOM. It basically allows you to write JS in such a way that it is compartmentalized into reusable components to make it easy to scale. Facebook created ReactJS to solve the problems they were having with scalability and data management when there are literally millions of things happening on the DOM all at one time. It works by abstracting Javascript away and modularizing the code so that you can separate things into components that then interact with each other. When you interact with an element/component in a react app, React updates its component tree.
+
 - [ ] What does it mean to _think_ in react?
 
-- [ ] Describe state.
+More than anything, React is a way of thinking about and writing code. It has its own data flow that can be difficult to understand, so it requires a certain way of thinking in order to write it and use it effectively. Fundamentally, the ability to break things down into smaller pieces (components) based on functionality and what you need it to do or how you need it to be interacted with by users and then translate that into a structure that works in React is important. Reusability is also an important concept for thinking in React. 
+
+- [ ] Describe state. 
+
+State is the data that our components have access to. We use "props" to pass it around from component to component. It usually lives in the main component, but you can setState on any component. It should be in the common ancestor for all components that need access to that state. Child components can't naturally access or set state -- they need special permission from the parent component in order to have power over state by way of functions on the parent component that are called back on the child.
 
 - [ ] Describe props.
+
+Props stands for properties. They are immutable and components can never modify their own props. When state changes, props get passed around. An analogy used in the training kit was that State is the heart of a component and Props are the blood. 
 
 ## Project Set Up
 
